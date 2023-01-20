@@ -41,7 +41,7 @@ botonDeFiltro.onclick = function() {
     li.removeChild(li.firstChild);
   }
 
-  const texto = $i.value;
+  const texto = $i.value.toLowerCase();
   console.log(texto);
   const productosFiltrados = filtrado(productos, texto );
 
@@ -65,4 +65,8 @@ botonDeFiltro.onclick = function() {
 
 const filtrado = (productos = [], texto) => {
   return productos.filter(item => item.tipo.includes(texto) || item.color.includes(texto));
+
+
+
+  
 }  
